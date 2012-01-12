@@ -8,4 +8,8 @@ class PagesController < ApplicationController
       format.html { render 'frontpage' }
     end
   end
+
+  def dont_stalk_me
+    @title = "Don't Stalk Me"
+  end
 end
