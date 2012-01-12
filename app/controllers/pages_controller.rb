@@ -1,10 +1,10 @@
-class FrontpageController < ApplicationController
+class PagesController < ApplicationController
   def frontpage
     @title = "Home"
     @user = User.new
+    @stories = Story.all
 
     respond_to do |format|
-      @stories = Story.all
       format.html { render 'frontpage' }
     end
   end

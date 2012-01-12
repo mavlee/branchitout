@@ -5,7 +5,7 @@ Branchitout::Application.routes.draw do
   resources :comments
   resources :sessions, :only => [:new, :create, :destroy]
 
-  root :to => "frontpage#frontpage"
+  root :to => "pages#frontpage"
 
   match "signup" => "users#sign_up"
   match "login" => "sessions#new"
