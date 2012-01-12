@@ -14,6 +14,9 @@
 /log/*.log
 /tmp
 
+# Ignore generated assets
+/public/assets
+
 # Ignore vim tmp and swap files
 *~
 *.swp
