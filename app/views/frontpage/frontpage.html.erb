@@ -1,0 +1,29 @@
+<%= render 'templates/story_templates.html' %>
+
+<div class="row">
+  <div class="offset1">
+    <h2 class="headingLine">Read a Story</h1>
+  </div>
+</div>
+
+<div id="frontpage" class="row">
+  <div id="story-list-container" class="span8 offset1">
+    <ul id="story-list-placeholder"></ul>
+  </div>
+
+  <div class="span5 sellingBox">
+    <h1>Is the time write?</h1>
+    <p>Then it's time to...</p>
+    <a class="submit_button" href="/stories/new">
+      Create a Story
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.BranchItOut.stories = <%= raw @stories.to_json %>;
+</script>
+
+<div class="fb-like" data-href="http://www.branchitout.com" data-send="false" data-width="450" data-show-faces="true"></div>
+
+<%= requirejs_include_tag "home_page" %>

@@ -1,0 +1,30 @@
+<div class="editItemForm row">
+  <div class="row">
+    <div class="span6 offset2">
+      <h1>Create a Story</h1>
+    </div>
+  </div>
+  <div class="row">
+    <%= form_for @story do |form| %>
+      <div class="row">
+        <div class="offset2 span14">
+          <label for="title">Story Title</label>
+          <div class="input">
+            <%= form.text_field :title, :placeholder => "Story Title", :class => "span10 mainField" %>
+          </div>
+          <div class="clearfix"></div>
+          <label for="description">Description</label>
+          <div class="input">
+            <%= form.text_area :description, :placeholder => "Description", :class => "span10 offset2 descriptionField" %>
+          </div>
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="span4 offset2">
+              <%= form.submit "Create Story", :class => "btn saveButton" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

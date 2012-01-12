@@ -1,0 +1,11 @@
+<p>
+  <b>Title:</b>
+  <%= @story.title %>
+  </br>
+  <b>Description:</b>
+  <%= @story.description %>
+
+  <br />
+  <a href="<%= story_nodes_path(@story.start_story_node_id) %>">continue to the story</a>
+  <br />
+</p>

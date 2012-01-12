@@ -1,0 +1,66 @@
+// Place all the styles related to the frontpage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#frontpage {
+  #story-list-placeholder {
+    li {
+      margin: 20px 0;
+      list-style: none;
+    }
+
+    .story-title {
+      color: #722E00;
+      font-size: 24px;
+    }
+  }
+
+  #story-list-container, .sellingBox {
+    border: 5px solid #FF9900;
+
+    ul {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .sellingBox {
+    h1 {
+      margin-top: 15px;
+      text-align: center;
+      color: #722E00;
+    }
+
+    p {
+      text-align: center;
+      font-size: 15px;
+      color: #722E00;
+    }
+
+    .submit_button {
+      display: block;
+      font-size: 20px;
+      line-height: 40px;
+      height: 40px;
+      width: 200px;
+      background-color: #FF9900;
+      text-align: center;
+      -moz-border-radius: 15px;
+      border-radius: 10px;
+      color: white;
+      margin: 0 auto;
+      margin-bottom: 10px;
+
+      -moz-box-shadow: 2px 2px 2px #888;
+      -webkit-box-shadow: 2px 2px 2px #888;
+      box-shadow: 2px 2px 2px #888;
+    }
+  }
+}
+
+.headingLine {
+  font-size: 36px;
+  font-weight: normal;
+  color: #722E00;
+  margin-bottom: 10px;
+}

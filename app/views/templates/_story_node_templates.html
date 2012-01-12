@@ -1,0 +1,50 @@
+<script id="story-node-tpl" type="text/template">
+  <div class="story-node">
+
+    {% if (parent) { %}
+      <a class="edit-branch-btn btn disabled" href="{{ ROUTES['story_nodes'].show(parent.id) }}">
+        Back
+      </a>
+    {% } else { %}
+      <span style="float: right;">
+        Beginning Of Story
+      </span>
+    {% } %}
+
+    <div class="branch-header">
+      <h2 class="branch-title">{{ title }}</h2>
+      <span>By: <span class="author">{{ author.username }}</span></span>
+    </div>
+
+    <div class="branch-content">
+      {% var temp = _.escape(content).replace(/\n/g, '<br/>') %}
+      {= temp =}
+    </div>
+
+    {% if (currentUser && currentUser.id == author.id) { %}
+      <a class="edit-branch-btn btn" href="{{ ROUTES['story_nodes'].edit(id) }}">
+        Edit Text
+      </a>
+      <div class="clear"></div>
+    {% } %}
+
+    <ul class="branch-link-group">
+      {% if (branches.length > 0) { %}
+        {% _.each(branches, function(branch) { %}
+          <li>
+            <a class="branch-link" href="{{ ROUTES['story_nodes'].show(branch.id) }}">
+              {{ branch.title }}
+            </a>
+          </li>
+        {% }); %}
+      {% } else { %}
+        No branches yet =(
+      {% } %}
+    </ul>
+
+    <a class="btn new-branch-btn" href="{{ ROUTES['story_nodes'].new() }}?parent={{ id }}">
+      New Branch
+    </a>
+  </div>
+  <br />
+</script>
