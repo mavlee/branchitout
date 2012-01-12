@@ -4,24 +4,41 @@
       <%= image_tag("logo.png", :size => "175x100", :alt => "Branch it out") %>
     </a>
   </div>
-  <div class="span5">
-    <h2 class="tagLine">Your Path. Your choice.</h2>
+  <div class="span12">
+    <div class="row">
+      <div class="span5">
+        <h2 class="tagLine">Your Path. Your choice.</h2>
+      </div>
+      <div class="span7">
+        <% if signed_in? %>
+          <div class="user-status-container">
+            <span>
+              <a class="btn primary loginButton" href="<%= logout_path %>">Logout</a>
+              <span class="welcomeLine">Welcome <strong><%= current_user.username %></strong></span>
+            </span>
+          </div>
+        <% else %>
+          <div class="user-status-container">
+            <span>
+              <a class="btn primary loginButton" href="<%= login_path %>">Login</a>
+              <span class="welcomeLine">Welcome <strong>Guest</strong></span>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="span7">
-    <% if signed_in? %>
-      <div class="user-status-container">
-        <span>
-          <a class="btn primary loginButton" href="<%= logout_path %>">Logout</a>
-          <span class="welcomeLine">Welcome <strong><%= current_user.username %></strong></span>
-        </span>
-      </div>
-    <% else %>
-      <div class="user-status-container">
-        <span>
-          <a class="btn primary loginButton" href="<%= login_path %>">Login</a>
-          <span class="welcomeLine">Welcome <strong>Guest</strong></span>
-        </span>
-      </div>
-    <% end %>
+  <div class="row">
+    <div class="span4">
+      <a href="/">Home</a>
+    </div>
+    <div class="span4">
+      <a href="http://blog.branchitout.com">Blog</a>
+    </div>
+    <div class="span4">
+      <a href="/about">About</a>
+    </div>
+  </div>
+  </div>
   </div>
 </div>
