@@ -18,6 +18,7 @@ define ['underscore'], (_) ->
   ROUTES =
     stories     : new Route '/stories'
     story_nodes : new Route '/story_nodes'
+    votes       : new Route '/votes'
 
   template = (text, context) ->
     extraHelpers =

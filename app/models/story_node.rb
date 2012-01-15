@@ -3,6 +3,7 @@ class StoryNode < ActiveRecord::Base
   belongs_to :story
   belongs_to :author, :class_name => "User"
 
+  has_many :votes
   has_many :story_branches, :class_name => "StoryBranch",
            :foreign_key => :from_id
   has_many :branches, :through => :story_branches, :source => :to

@@ -6,6 +6,7 @@ define ['backbone'], (Backbone) ->
       content : ''
     initialize : (options) ->
       this.set { branches : [] } if not options.branches?
+      this.set { votes : [] } if not options.votes?
 
   return {
     StoryNodeModel : StoryNodeModel

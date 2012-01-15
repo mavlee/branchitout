@@ -3,6 +3,7 @@ Branchitout::Application.routes.draw do
   resources :story_nodes
   resources :stories
   resources :comments
+  resources :votes
   resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => "pages#frontpage"
