@@ -12,4 +12,13 @@ class PagesController < ApplicationController
   def dont_stalk_me
     @title = "Don't Stalk Me"
   end
+
+  def feedback
+    @title = "Feedback"
+    @feedback = Feedback.new
+  end
+
+  def about
+    @title = "About"
+  end
 end

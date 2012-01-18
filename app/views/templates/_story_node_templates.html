@@ -14,11 +14,11 @@
     <div class="branch-header">
       <h2 class="branch-title">{{ title }}</h2>
       <span>By: <span class="author">{{ author.username }}</span></span>
-      <a class="btn" style="float:right" href="{{ ROUTES['votes'].new() }}?node={{ id }}">upvote</a>
+      <a class="btn upvote-btn" href="{{ ROUTES['votes'].new() }}?node={{ id }}">upvote</a>
       {% if (votes.length > 0) { %}
-        <span style="float:right">{{ votes.length }}</span>
+        <span class="vote-count">{{ votes.length }} votes</span>
       {% } else { %}
-        <span style="float:right">No votes yet )=</span>
+        <span class="vote-count">No votes yet )=</span>
       {% } %}
     </div>
 
