@@ -32,11 +32,13 @@
   <body>
     <div class="container">
       <%= render 'layouts/topbar' %>
-      <section class="round">
-        <% flash.each do |key, value| %>
-          <div class="flash round <%= key %>"><%= value %></div>
-        <% end %>
-      </section>
+      <% flash.each do |key, value| %>
+        <div class="row">
+          <div class="span8 offset4">
+            <div class="alert-message <%= key %>"><%= value %></div>
+          </div>
+        </div>
+      <% end %>
 
       <%= yield %>
 
