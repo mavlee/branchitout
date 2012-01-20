@@ -21,7 +21,6 @@
 
   .menuItem {
     display: block;
-    background-color: #FF9900;
     width: 100%;
     line-height: 40px;
     text-align: center;
@@ -30,6 +29,18 @@
     border-radius: 10px;
 
     a {
+      color: #FFFFFF;
+      background-color: #FF9900;
+      display: block;
+      font-size: 20px;
+      text-decoration: none;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    a:hover {
+      background-color: #722E00;
       color: #FFFFFF;
     }
   }
