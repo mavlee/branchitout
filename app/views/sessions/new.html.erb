@@ -3,10 +3,16 @@
     <div class="loginForm">
       <%= form_for(:sessions, :url => sessions_path) do |form| %>
         <div>Username</div>
-        <%= form.text_field :username, :placeholder => "Username", :autocomplete => "on" %>
+        <%= form.text_field :username, :placeholder => "Enter username...", :autocomplete => "on" %>
         <br />
-        <%= form.submit "Sign up/Login", :class => "btn primary loginButton" %>
+        <div>Password</div>
+        <%= form.password_field :password, :placeholder => "Enter password..." %>
+        <br />
+        <%= form.submit "Login", :class => "btn primary loginButton" %>
       <% end %>
     </div>
+
+    New to branchitout.com?
+    <%= link_to "Sign up here", new_user_path %>
   </div>
 </div>

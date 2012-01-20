@@ -1,21 +1,52 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="editItemForm row">
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row offset2 span14">
+      <%= f.label :username %>
+      <div class="input">
+        <%= f.text_field :username, :placeholder => "Enter username...",
+                         :class => "span10"%>
+      </div>
+      <div class="clearfix"></div>
+
+      <%= f.label :email %>
+      <div class="input">
+        <%= f.text_field :email, :placeholder => "Enter email...",
+                         :class => "span10 offset2"%>
+      </div>
+      <div class="clearfix"></div>
+
+      <%= f.label :password %>
+      <div class="input">
+        <%= f.password_field :password, :placeholder => "Enter password...",
+                             :class => "span10 offset2" %>
+      </div>
+      <div class="clearfix"></div>
+
+      <%= f.label :password_confirmation %>
+      <div class="input">
+        <%= f.password_field :password_confirmation,
+                             :placeholder => "Confirm password...",
+                             :class => "span10 offset2"%>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="row">
+        <div class="span4 offset2">
+          <%= f.submit "Create User", :class => "btn saveButton" %>
+        </div>
+      </div>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

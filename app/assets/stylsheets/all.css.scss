@@ -101,3 +101,20 @@
 .clear {
   clear: both;
 }
+
+.flash {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.flash.notice {
+  background-color: #FF9900;
+  color: #FFF;
+}
+
+.flash.error {
+  background-color: #F00;
+  color: #FFF;
+}
+

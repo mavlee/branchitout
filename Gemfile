@@ -3,11 +3,12 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 
 group :production do
-    gem 'pg'
+  gem 'pg'
 end
 
 group :development, :test do
-    gem 'sqlite3'
+  gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 # Gems used only for assets and not required
@@ -21,12 +22,11 @@ end
 gem 'jquery-rails'
 gem 'requirejs-rails'
 
-
 # Comments
 gem 'acts_as_commentable'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do
   gem 'ruby-debug19', :require => 'ruby-debug'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120118014744) do
+ActiveRecord::Schema.define(:version => 20120118021100) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20120118014744) do
     t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.string   "password_digest"
   end
 
   create_table "votes", :force => true do |t|

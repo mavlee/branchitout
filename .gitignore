@@ -20,3 +20,6 @@
 # Ignore vim tmp and swap files
 *~
 *.swp
+
+# Sass cache
+/.sass-cache
