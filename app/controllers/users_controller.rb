@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if current_user != nil
+      redirect_to :root
+    else
+      @user = User.new
+    end
   end
 end
