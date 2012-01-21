@@ -9,7 +9,7 @@ Branchitout::Application.routes.draw do
 
   root :to => "pages#frontpage"
 
-  match "signup"      => "users#sign_up"
+  match "signup"      => "users#new"
   match "login"       => "sessions#new"
   match "logout"      => "sessions#destroy"
   match "dontstalkme" => "pages#dont_stalk_me"
