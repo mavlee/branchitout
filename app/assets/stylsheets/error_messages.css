@@ -41,3 +41,8 @@
   list-style: square;
 }
 */
+
+#error_explanation {
+  left: 30px;
+  width: 550px;
+}
