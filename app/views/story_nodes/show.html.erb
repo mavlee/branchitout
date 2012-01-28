@@ -1,15 +1,23 @@
 <div class="row">
   <div class="span4">
     <h1 class="story-title"><%= @story_node.story.title %></h1>
+    <div class="tower-ad">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-3868601799767231";
+        /* Tower Ad */
+        google_ad_slot = "8876164667";
+        google_ad_width = 160;
+        google_ad_height = 600;
+        //-->
+      </script>
+      <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
   </div>
 
   <div class="span10 offset1">
     <div id="story-node-placeholder"></div>
-  </div>
-</div>
-<br />
-<div class="row">
-  <div class="span10 offset5">
     <% if !@comments.nil? %>
       <div class="comments-container">
         <% @comments.each do |comment| %>
@@ -40,6 +48,21 @@
         <% end %>
       </div>
     <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="banner-ad">
+    <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-3868601799767231";
+      /* Leaderboard Ad */
+      google_ad_slot = "8625148376";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      //-->
+    </script>
+    <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
   </div>
 </div>
 
