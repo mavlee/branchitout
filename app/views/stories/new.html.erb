@@ -5,22 +5,41 @@
     </div>
   </div>
   <div class="row">
-    <%= form_for @story do |form| %>
+    <%= form_tag("/stories", :method => "post") do %>
       <div class="row">
         <div class="offset2 span14">
-          <label for="title">Story Title</label>
+          <%= label_tag(:title, "Story Title") %>
           <div class="input">
-            <%= form.text_field :title, :placeholder => "Story Title", :class => "span10 mainField" %>
+            <%= text_field_tag(:title, nil, :placeholder => "Story Title", :class => "span10 mainField") %>
           </div>
           <div class="clearfix"></div>
-          <label for="description">Description</label>
+          <%= label_tag(:description, "Description") %>
           <div class="input">
-            <%= form.text_area :description, :placeholder => "Description", :class => "span10 offset2 descriptionField" %>
+            <%= text_area_tag(:description, nil, :placeholder => "Description", :class => "span10 offset2 descriptionField") %>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6 offset2">
+          <h1>Write the First Branch</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset2 span14">
+          <%= label_tag(:branch_title, "Branch Title") %>
+          <div class="input">
+            <%= text_field_tag(:branch_title, nil, :placeholder => "Branch Title", :class => "span10 mainField") %>
+          </div>
+          <div class="clearfix"></div>
+          <%= label_tag(:branch_content, "Branch Content") %>
+          <div class="input">
+		        <%= text_area_tag(:branch_content, nil, :class => "stories_text_area", :placeholder => "Branch Content", :class => "span10 offset2 contentField") %>
           </div>
           <div class="clearfix"></div>
           <div class="row">
             <div class="span4 offset2">
-              <%= form.submit "Create Story", :class => "btn saveButton" %>
+              <%= submit_tag("Create Story", :class => "btn saveButton") %>
             </div>
           </div>
         </div>

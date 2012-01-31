@@ -21,19 +21,19 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new(params[:story])
-
+    @story = Story.new
+    @story.title = params[:title]
+    @story.description = params[:description]
     @story_node = StoryNode.new
     @story_node.save
     @story.start_story_node_id = @story_node.id
-
     @story.save
-
     @story_node.story_id = @story.id
     @story_node.author = current_user
+    @story_node.title = params[:branch_title]
+    @story_node.content = params[:branch_content]
     @story_node.save
-
-    redirect_to edit_story_node_path(@story_node)
+    redirect_to @story_node
   end
 
   def show
