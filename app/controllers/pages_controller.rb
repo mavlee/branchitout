@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def frontpage
     @title = "Home"
     @user = User.new
-    @stories = Story.where(:status => Story::Status::NORMAL)
+    @stories = Story.where(:status => Story::Status::NORMAL).reverse
 
     respond_to do |format|
       format.html { render 'frontpage' }
